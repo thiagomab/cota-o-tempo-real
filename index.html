@@ -5,42 +5,28 @@
 <title>Teste</title>
 <script>
 var count = 0;
- 
+
 function printTime() {
-let text = document.querySelector('#text');
-text.innerHTML=count;
-count++;
-setTimeout(printTime, 1_000);
- 
+  let text1 = document.querySelector('#text1');
+  let text2 = document.querySelector('#text2');
+  text1.innerHTML = count;
+  text2.innerHTML = count;
+  count++;
+  setTimeout(printTime, 1000);
 }
 </script>
- 
 </head>
 <body onload="printTime()">
 
-<h1> Com aria-describedby</h1> 
-<p id="money">R$ <span id="text">0</span>,00</p>
- 
-<button id="continuar" aria-describedby="money">Continuar</button>
+<h1>Com aria-describedby</h1> 
+<p id="money1">R$ <span id="text1">0</span>,00</p>
+<button id="continuar1" aria-describedby="money1">Continuar</button>
 <button>Cancelar</button>
 
- <script>
-var count = 0;
- 
-function printTime() {
-let text = document.querySelector('#text');
-text.innerHTML=count;
-count++;
-setTimeout(printTime, 1_000);
- 
-}
-</script>
- 
 <h2>Com aria-labeledby</h2>
-<p id="money">R$ <span id="text">0</span>,00</p>
- 
-<button id="continuar" aria-labeledby="money">Continuar</button>
+<p id="money2">R$ <span id="text2">0</span>,00</p>
+<button id="continuar2" aria-labelledby="money2">Continuar</button>
 <button>Cancelar</button>
- 
+
 </body>
 </html>
