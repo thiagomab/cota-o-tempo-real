@@ -17,10 +17,18 @@ setTimeout(printTime, 1_000);
  
 </head>
 <body onload="printTime()">
- 
+
+<h1> Com aria-describedby</h1> 
 <p id="money">R$ <span id="text">0</span>,00</p>
  
 <button id="continuar" aria-describedby="money">Continuar</button>
+<button>Cancelar</button>
+ 
+
+ <h2>Com aria-labeledby</h2>
+ <p id="money">R$ <span id="text">0</span>,00</p>
+ 
+<button id="continuar" aria-labeledby="money">Continuar</button>
 <button>Cancelar</button>
  
 </body>
