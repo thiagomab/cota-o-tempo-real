@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Teste</title>
+<script>
+var count = 0;
+ 
+function printTime() {
+let text = document.querySelector('#text');
+text.innerHTML=count;
+count++;
+setTimeout(printTime, 1_000);
+ 
+}
+</script>
+ 
+</head>
+<body onload="printTime()">
+ 
+<p id="money">R$ <span id="text">0</span>,00</p>
+ 
+<button id="continuar" aria-describedby="money">Continuar</button>
+<button>Cancelar</button>
+ 
+</body>
+</html>
