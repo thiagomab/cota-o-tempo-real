@@ -23,10 +23,21 @@ setTimeout(printTime, 1_000);
  
 <button id="continuar" aria-describedby="money">Continuar</button>
 <button>Cancelar</button>
- 
 
- <h2>Com aria-labeledby</h2>
- <p id="money">R$ <span id="text">0</span>,00</p>
+ <script>
+var count = 0;
+ 
+function printTime() {
+let text = document.querySelector('#text');
+text.innerHTML=count;
+count++;
+setTimeout(printTime, 1_000);
+ 
+}
+</script>
+ 
+<h2>Com aria-labeledby</h2>
+<p id="money">R$ <span id="text">0</span>,00</p>
  
 <button id="continuar" aria-labeledby="money">Continuar</button>
 <button>Cancelar</button>
